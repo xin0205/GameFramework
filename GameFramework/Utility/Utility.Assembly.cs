@@ -104,6 +104,32 @@ namespace GameFramework
 
                 return null;
             }
+
+            public static Type[] GetTypes(string[] assemblyNames)
+            {
+                List<Type> results = new List<Type>();
+                foreach (string assemblyName in assemblyNames)
+                {
+                    System.Reflection.Assembly assembly = null;
+                    try
+                    {
+                        assembly = System.Reflection.Assembly.Load(assemblyName);
+                    }
+                    catch
+                    {
+                        continue;
+                    }
+
+                    if (assembly == null)
+                    {
+                        continue;
+                    }
+
+                    results.AddRange(assembly.GetTypes());
+                }
+
+                return results.ToArray();
+            }
         }
     }
 }
