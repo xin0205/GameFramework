@@ -128,6 +128,8 @@ namespace GameFramework.UI
             }
         }
 
+        public int Serial { get => m_Serial;}
+
         /// <summary>
         /// 打开界面成功事件。
         /// </summary>

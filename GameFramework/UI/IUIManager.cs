@@ -61,6 +61,16 @@ namespace GameFramework.UI
             set;
         }
 
+
+        /// <summary>
+        /// 获取序号
+        /// </summary>
+        /// <returns></returns>
+        int Serial
+        {
+            get;
+        }
+
         /// <summary>
         /// 打开界面成功事件。
         /// </summary>
@@ -378,5 +388,6 @@ namespace GameFramework.UI
         /// <param name="uiFormInstance">要设置优先级的界面实例。</param>
         /// <param name="priority">界面实例优先级。</param>
         void SetUIFormInstancePriority(object uiFormInstance, int priority);
+
     }
 }
